@@ -4,25 +4,31 @@ class Shape {
     constructor(){
         this.color = '';
     }
-}
+    /* ADDED METHOD WITH COLOR AS THE PARAMETER TO SET THE COLOR PROPERTY
+     OF THE INSTANCE TO THE VALUE PASSED TO THE COLOR PARAMETER */
+    pickColor(color){
+        this.color = this.color
+    }
+};
 
-// USING THE EXTEND METHOD FOR EACH SPECIFIC SHAPE CLASS FOR ARGUMENTS FROM PARENT CLASS 'SHAPE'
+/* USING THE EXTEND METHOD FOR EACH SPECIFIC SHAPE CLASS TO GET THIS.COLOR PROPERTY FROM PARENT 
+CLASS 'SHAPE' THROUGH INHERITANCE */
 class Triangle {
     render() {
-        return '<svg width=
+        return `<polygon points="05,85 45,15 90,85" fill= '${this.color}' />`
     }
-}
+};
 // COLORS APPLIED VIA THE FILL PROPERTY
 class Circle {
     render() {
-        return '<
+        return `<circle cx= '50' cy= 50 r= '50' fill= '${this.color}'  />`
     }
-}
-
+};
+// MADE THE SQUARE WITH ROUNDED CORNERS FOR A LITTLE FLARE
 class Square {
     render() {
-        return '<svg width=
+        return `<rect X= '120' width= '150' height= '150' rx= '20' fill= '${this.color}' />`
     }
-}
-
-module.exports = 
+};
+// EXPORTING THESE CLASSES AS AN OBJECT FOR USE IN OTHER FILES
+module.exports = {Triangle, Circle, Square};
