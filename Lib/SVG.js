@@ -7,7 +7,7 @@ class SVG {
 
   render() {
     // RETURNS A THE STRING REPRESENTING THE SVG ELEMENT
-    return `<svg version="1.1" width="200" height="200" xmlns="http://www.w3.org/2000/svg"> ${this.shapeElement} ${this.textElement} </svg>`;
+    return `<svg version="1.1" width="200" height="200" xmlns="http://www.w3.org/2000/svg"> ${this.shapeEl} ${this.textEl} </svg>`;
   }
   // CREATING THE TEXT PROPERTY INCLUDING FONT SIZE, COLOR, AND LOCATION WITHIN THE SVG
 
@@ -15,7 +15,7 @@ class SVG {
     if (message.length > 3) {
       throw new Error("Maximum characters for message is 3.");
     } else {
-      this.textEl = `< text y="100" x="100"  font-size="30" text-anchor="middle" fill="${color}">${message}</text>`;
+      this.textEl = `<text y="100" x="100"  font-size="30" text-anchor="middle" fill="${color}">${message}</text>`;
       console.log("It worked!");
     }
   }

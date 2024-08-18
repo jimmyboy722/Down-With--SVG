@@ -1,6 +1,6 @@
 // FIRST SETTING UP IMPORTS
 const inquirer = require("inquirer");
-const writeFile = require("fs/promises");
+const { writeFile } = require("fs/promises");
 const SVG = require("./SVG");
 const { Triangle, Circle, Square } = require("./shapes");
 const { run } = require("jest");
@@ -58,10 +58,10 @@ function Terminal() {
         shape.pickColor(shapeColor);
         // Creating and configuring SVG images
         const svg = new SVG();
-        SVG.createText(text, textColor);
+        svg.createText(text, textColor);
         svg.createShape(shape);
-        // Writing the SVG to a file
-        return writeFile("images.svg", svg.render());
+        // Writing the SVG to a logo.svg file per challenge instructions
+        return writeFile("logo.svg", svg.render());
       })
       // Chaining another .then method to log successful image generation
       .then(() => {
@@ -74,3 +74,5 @@ function Terminal() {
       })
   );
 }
+
+module.exports = Terminal;
