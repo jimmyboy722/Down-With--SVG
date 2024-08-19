@@ -41,4 +41,7 @@
 -------------------------------------------
 ## <ins>See it for yourself!</ins>
 
-Here is a link to the walkthrough video demonstrating the usage and functionality of the generator.
+Here is a [link](https://watch.screencastify.com/v/4Z1m7hzljjxCX0bylYoi) to the walkthrough video demonstrating the usage and functionality of the generator.
+
+
+
