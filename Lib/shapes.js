@@ -15,19 +15,19 @@ class Shape {
 CLASS 'SHAPE' THROUGH INHERITANCE */
 class Triangle extends Shape {
   render() {
-    return `<polygon points="05,85 45,15 90,85" fill= '${this.color}' />`;
+    return `<polygon points="30,160 95,15 200,160" fill= '${this.color}' />`;
   }
 }
 // COLORS APPLIED VIA THE FILL PROPERTY
 class Circle extends Shape {
   render() {
-    return `<circle cx= '50' cy= '50' r= '50' fill= '${this.color}'  />`;
+    return `<circle cx= '100' cy= '90' r= '60' fill= '${this.color}'  />`;
   }
 }
 // MADE THE SQUARE WITH ROUNDED CORNERS FOR A LITTLE FLARE
 class Square extends Shape {
   render() {
-    return `<rect X= '120' width= '150' height= '150' rx= '20' fill= '${this.color}' />`;
+    return `<rect X= '120' width= '190' height= '190' rx= '20' fill= '${this.color}' />`;
   }
 }
 // EXPORTING THESE CLASSES AS AN OBJECT FOR USE IN OTHER FILES
